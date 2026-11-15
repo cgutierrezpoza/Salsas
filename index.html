@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cocina Básica · Recetario de salsas madre y pastas</title>
+<meta name="description" content="Recetario interactivo basado en el Manual de apoyo de Cocina Básica: salsas madre, derivados y masa para pastas.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+/* Contador de visitas */
+.visit-stat{position:relative;padding-left:18px}
+.visit-stat::before{content:"";position:absolute;left:0;top:10px;width:9px;height:9px;border-radius:50%;background:#3E9C78;box-shadow:0 0 0 0 rgba(62,156,120,.5);animation:latido 2s infinite}
+@keyframes latido{70%{box-shadow:0 0 0 10px rgba(62,156,120,0)}100%{box-shadow:0 0 0 0 rgba(62,156,120,0)}}
+</style>
+</head>
+<body data-slug="" style="">
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true">🥄</span>Cocina Básica</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <ul class="nav-links"><li><a href="index.html" aria-current=page>Inicio</a></li><li><a href="index.html#areas">Áreas</a></li><li><a href="index.html#recetario">Recetas</a></li><li><a href="index.html#salsas-madre">Salsas madre</a></li></ul>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Escuela de Gastronomía · Manual de apoyo Desarrollado por Claudia Gurierrez Poza</span>
+      <h1>El recetario de <em>cocina básica para la escuela de gastronomia DuocUc sede San Andrés Concepción</em></h1>
+      <p class="lead">Las salsas madre, sus derivados y la masa para pastas frescas del manual de Cocina Básica, convertidas en fichas interactivas: escala porciones, marca tus pasos y explora cada área de la cocina.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#areas">Explorar las áreas →</a>
+        <button class="btn btn-soft" id="random" type="button">🎲 Receta al azar</button>
+      </div>
+      <div class="hero-stats">
+        <div><b>6</b><span>áreas</span></div>
+        <div><b>11</b><span>recetas</span></div>
+        <div><b>54</b><span>salsas derivadas</span></div>
+        <div class="visit-stat" id="visitas" hidden><b id="visitas-num">0</b><span>personas han visitado</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="false"><a class="hero-card c1" href="recetas/bechamel.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2021_Sos_beszamelowy.jpg?width=700" alt="" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/bechamel.svg'"><span>Bechamel</span></a><a class="hero-card c2" href="recetas/salsa-espanola.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sauce_Spagnole-09.JPG?width=700" alt="" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-espanola.svg'"><span>Salsa española</span></a><a class="hero-card c3" href="recetas/masa-para-pastas.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Art_of_Pasta_Making_in_Italy_with_Mama_Isa.jpg?width=700" alt="" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/masa-para-pastas.svg'"><span>Masa para pastas frescas</span></a></div>
+  </div>
+</section>
+
+<section class="section" id="presentacion">
+  <div class="wrap intro-grid">
+    <div class="intro-text reveal">
+      <span class="eyebrow">Presentación</span>
+      <h2>Técnica antes que receta</h2>
+      <p>El manual de apoyo acompaña a estudiantes y titulados como una guía ilustrada de las principales técnicas de cocina: aprendidas, aplicadas y perfeccionadas para desempeñarse en la industria.</p>
+      <p>Una salsa es el líquido, más o menos denso y sustancioso, que acompaña y realza el sabor y el aspecto de un plato. Dominar sus bases —emulsiones, roux, reducciones y montajes con mantequilla— permite crear decenas de variaciones.</p>
+      <blockquote class="quote">“Son las técnicas aprendidas las que posteriormente pueden ser aplicadas a otras recetas.”</blockquote>
+    </div>
+    <div>
+      <h3 class="intro-sub reveal">Las 5 características de una salsa</h3>
+      <div class="flip-grid"><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--peach)"><small>01</small><b>Viscosidad</b></div>
+  <div class="flip-face back">Resistencia al movimiento, dada por un agente espesante o por la reducción.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--butter)"><small>02</small><b>Textura</b></div>
+  <div class="flip-face back">Característica dada por los componentes de la salsa.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--mint)"><small>03</small><b>Color</b></div>
+  <div class="flip-face back">Tono logrado por la combinación de ingredientes.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--sky)"><small>04</small><b>Opacidad</b></div>
+  <div class="flip-face back">Grado de transparencia: opaca, translúcida o transparente.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--lav)"><small>05</small><b>Temperatura</b></div>
+  <div class="flip-face back">Frías o calientes, según el plato que acompañan.</div></div></button></div>
+      <h3 class="intro-sub reveal">Sus 4 componentes</h3>
+      <div class="flip-grid"><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--sky)"><small>Componente</small><b>Base o cuerpo</b></div>
+  <div class="flip-face back">Un fondo, crema, mantequilla u otro.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--lav)"><small>Componente</small><b>Sazón</b></div>
+  <div class="flip-face back">El condimento que destaca y realza el sabor.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--rose)"><small>Componente</small><b>Ligante</b></div>
+  <div class="flip-face back">Lo que aumenta la consistencia de la salsa.</div></div></button><button class="flip reveal" type="button"><div class="flip-inner">
+  <div class="flip-face front" style="--fbg:var(--peach)"><small>Componente</small><b>Guarnición</b></div>
+  <div class="flip-face back">Acompaña, da el nombre y ayuda a la presentación.</div></div></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Menú</span>
+      <h2>Áreas de la cocina</h2>
+      <p>Elige un área para conocer su técnica base y las recetas que la componen.</p>
+    </div>
+    <div class="areas-grid"><a class="area-card reveal" href="areas/salsas-frias.html" style="--area-bg:#CFEFE3;--accent:#3E9C78">
+  <span class="arrow" aria-hidden="true">→</span>
+  <span class="eyebrow">01 · Garde manger</span>
+  <h3>Salsas frías emulsionadas</h3>
+  <p>Son el resultado de la mezcla ordenada y batida de ingredientes líquidos de igual o distinto origen o densidad, con…</p>
+  <span class="count">2 recetas</span>
+  <div class="area-thumbs"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fresh_mayonnaise.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/mayonesa.svg'"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raspberry_vinaigrette.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/vinagreta.svg'"></div>
+</a><a class="area-card reveal" href="areas/salsas-blancas.html" style="--area-bg:#E7DFFA;--accent:#7A62C6">
+  <span class="arrow" aria-hidden="true">→</span>
+  <span class="eyebrow">02 · Saucier</span>
+  <h3>Salsas blancas</h3>
+  <p>Salsas madres calientes que se diferencian por la base usada en su elaboración: distintos tipos de fondos o lácteos.…</p>
+  <span class="count">3 recetas</span>
+  <div class="area-thumbs"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Making_White_sauce_5.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/veloute.svg'"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2021_Sos_beszamelowy.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/bechamel.svg'"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cream_sauce.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/reduccion-de-crema.svg'"></div>
+</a><a class="area-card reveal" href="areas/salsas-oscuras.html" style="--area-bg:#FFDCCB;--accent:#C9653F">
+  <span class="arrow" aria-hidden="true">→</span>
+  <span class="eyebrow">03 · Saucier</span>
+  <h3>Salsas oscuras</h3>
+  <p>Resultan de la cocción de carnes o huesos de animales —vacuno, cordero o caza— con vegetales, finas hierbas,…</p>
+  <span class="count">1 receta</span>
+  <div class="area-thumbs"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sauce_Spagnole-09.JPG?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-espanola.svg'"></div>
+</a><a class="area-card reveal" href="areas/salsas-semicoaguladas.html" style="--area-bg:#FFF0B5;--accent:#B8901A">
+  <span class="arrow" aria-hidden="true">→</span>
+  <span class="eyebrow">04 · Saucier</span>
+  <h3>Salsas semicoaguladas calientes</h3>
+  <p>Se elaboran con mantequilla líquida ligeramente templada, yemas de huevo y una garnitura según el derivado. Son…</p>
+  <span class="count">2 recetas</span>
+  <div class="area-thumbs"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spargel_sauce_hollandaise.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-holandesa.svg'"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9arnaise_sauce_with_Tarragon_garnish.jpeg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-bearnesa.svg'"></div>
+</a><a class="area-card reveal" href="areas/salsas-de-mantequilla.html" style="--area-bg:#FBDDE4;--accent:#C95C7C">
+  <span class="arrow" aria-hidden="true">→</span>
+  <span class="eyebrow">05 · Saucier</span>
+  <h3>Salsas emulsionadas calientes</h3>
+  <p>Se obtienen a través de la reducción de un medio líquido ácido —vinagre, jugo de limón o vino— que luego se emulsiona…</p>
+  <span class="count">2 recetas</span>
+  <div class="area-thumbs"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Purple_asparagus_in_Beurre_blanc_sauce.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/beurre-blanc.svg'"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bowl_of_melted_butter.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/beurre-fondue.svg'"></div>
+</a><a class="area-card reveal" href="areas/pastas.html" style="--area-bg:#D4EAFA;--accent:#3F82BC">
+  <span class="arrow" aria-hidden="true">→</span>
+  <span class="eyebrow">06 · Entremesero</span>
+  <h3>Pastas italianas</h3>
+  <p>Según su fabricación, las pastas pueden ser artesanales, industriales, frescas o secas. Según su cocción, algunas se…</p>
+  <span class="count">1 receta</span>
+  <div class="area-thumbs"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Art_of_Pasta_Making_in_Italy_with_Mama_Isa.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/masa-para-pastas.svg'"></div>
+</a></div>
+  </div>
+</section>
+
+<section class="section" id="recetario">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Recetario</span>
+      <h2>Todas las recetas</h2>
+      <p>Filtra por área o busca por nombre, ingrediente o salsa derivada (prueba con “tártara” o “estragón”).</p>
+    </div>
+    <div class="toolbar">
+      <div class="tabs" role="toolbar" aria-label="Filtrar por área"><button class="tab" data-area="todas" aria-pressed="true">Todas</button><button class="tab" data-area="salsas-frias" aria-pressed="false" style="--tab-acc:#3E9C78"><span class="chip-dot"></span>Frías</button><button class="tab" data-area="salsas-blancas" aria-pressed="false" style="--tab-acc:#7A62C6"><span class="chip-dot"></span>Blancas</button><button class="tab" data-area="salsas-oscuras" aria-pressed="false" style="--tab-acc:#C9653F"><span class="chip-dot"></span>Oscuras</button><button class="tab" data-area="salsas-semicoaguladas" aria-pressed="false" style="--tab-acc:#B8901A"><span class="chip-dot"></span>Semicoaguladas</button><button class="tab" data-area="salsas-de-mantequilla" aria-pressed="false" style="--tab-acc:#C95C7C"><span class="chip-dot"></span>De mantequilla</button><button class="tab" data-area="pastas" aria-pressed="false" style="--tab-acc:#3F82BC"><span class="chip-dot"></span>Pastas</button></div>
+      <label class="search"><span class="sr-only">Buscar receta</span><input id="q" type="search" placeholder="Buscar receta o ingrediente…"></label>
+    </div>
+    <div class="recipes" id="recipes"><a class="r-card reveal" href="recetas/mayonesa.html" data-area="salsas-frias" data-search="Mayonesa Emulsión estable Salsas frías emulsionadas Yema de huevo pasteurizada Aceite Mostaza Dijon Sal Pimienta Jugo de limón o vinagre blanco Remolada Tártara Tyrolienne Verde Andaluza Cóctel Mosquetera" style="--area-bg:#CFEFE3;--accent:#3E9C78">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fresh_mayonnaise.jpg?width=600" alt="Foto de Mayonesa" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/mayonesa.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Frías</span>
+    <h3>Mayonesa</h3>
+    <p class="sub">Emulsión estable</p>
+    <div class="meta"><span>⚖️ 200 g</span><span>📝 6 pasos</span><span>🧂 6</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/vinagreta.html" data-area="salsas-frias" data-search="Vinagreta Emulsión inestable Salsas frías emulsionadas Vinagre blanco, tinto o derivado Aceite vegetal u otro Pimienta blanca molida Sal Mostaza Dijon Vinagreta Noruega Du Pêcheur Ravigote French dressing Chiffonade Cream dressing Cheese dressing Russian dressing" style="--area-bg:#CFEFE3;--accent:#3E9C78">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raspberry_vinaigrette.jpg?width=600" alt="Foto de Vinagreta" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/vinagreta.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Frías</span>
+    <h3>Vinagreta</h3>
+    <p class="sub">Emulsión inestable</p>
+    <div class="meta"><span>⚖️ 120 cc</span><span>📝 5 pasos</span><span>🧂 5</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/veloute.html" data-area="salsas-blancas" data-search="Velouté Roux + fondo Salsas blancas Harina Mantequilla Fondo blanco Pimienta blanca molida Sal Alcaparras Champiñones Chivry Ciboulette Estragón Raifort Albufera Champiñones Toulousaine Anchoas Bercy Camarones Alcaparras Diplomada Finas hierbas Ostras Riche" style="--area-bg:#E7DFFA;--accent:#7A62C6">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Making_White_sauce_5.jpg?width=600" alt="Foto de Velouté" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/veloute.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Blancas</span>
+    <h3>Velouté</h3>
+    <p class="sub">Roux + fondo</p>
+    <div class="meta"><span>⚖️ 1.000 cc</span><span>📝 4 pasos</span><span>🧂 5</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/bechamel.html" data-area="salsas-blancas" data-search="Bechamel Roux + leche Salsas blancas Harina Mantequilla Leche Pimienta blanca molida Nuez moscada Sal Aurora Mousseline Mornay Nantua Raifort" style="--area-bg:#E7DFFA;--accent:#7A62C6">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2021_Sos_beszamelowy.jpg?width=600" alt="Foto de Bechamel" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/bechamel.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Blancas</span>
+    <h3>Bechamel</h3>
+    <p class="sub">Roux + leche</p>
+    <div class="meta"><span>⚖️ 1.000 cc</span><span>📝 4 pasos</span><span>🧂 6</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/reduccion-de-crema.html" data-area="salsas-blancas" data-search="Salsa por reducción de crema Crema concentrada Salsas blancas Aceite Chalota o cebolla Vino blanco Fondo Crema Pimienta blanca molida Sal Mostaza Alcaparras Finas hierbas" style="--area-bg:#E7DFFA;--accent:#7A62C6">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cream_sauce.jpg?width=600" alt="Foto de Salsa por reducción de crema" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/reduccion-de-crema.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Blancas</span>
+    <h3>Salsa por reducción de crema</h3>
+    <p class="sub">Crema concentrada</p>
+    <div class="meta"><span>⚖️ 500 cc</span><span>📝 5 pasos</span><span>🧂 7</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/salsa-espanola.html" data-area="salsas-oscuras" data-search="Salsa española Salsa madre oscura Salsas oscuras Huesos de vacuno sin grasa Mirepoix graso Vino tinto Tomate o concentrado Fondo oscuro de vacuno Bouquet garni Diabla Bourguignonne Finas hierbas" style="--area-bg:#FFDCCB;--accent:#C9653F">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sauce_Spagnole-09.JPG?width=600" alt="Foto de Salsa española" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-espanola.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Oscuras</span>
+    <h3>Salsa española</h3>
+    <p class="sub">Salsa madre oscura</p>
+    <div class="meta"><span>⚖️ 1.000 cc</span><span>📝 6 pasos</span><span>🧂 6</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/salsa-holandesa.html" data-area="salsas-semicoaguladas" data-search="Salsa holandesa Yemas + mantequilla clarificada Salsas semicoaguladas calientes Agua Jugo de limón Sal Pimienta negra Yemas de huevo Mantequilla clarificada Mousseline Mostaza Maltesa Mikado" style="--area-bg:#FFF0B5;--accent:#B8901A">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spargel_sauce_hollandaise.jpg?width=600" alt="Foto de Salsa holandesa" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-holandesa.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Semicoaguladas</span>
+    <h3>Salsa holandesa</h3>
+    <p class="sub">Yemas + mantequilla clarificada</p>
+    <div class="meta"><span>⚖️ 400 cc</span><span>📝 11 pasos</span><span>🧂 6</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/salsa-bearnesa.html" data-area="salsas-semicoaguladas" data-search="Salsa bearnesa Reducción de estragón Salsas semicoaguladas calientes Vino blanco Vinagre blanco Vinagre de estragón Chalota Pimienta negra machacada Sal Yemas de huevo Mantequilla clarificada Estragón fresco Perifollo Choron Tyrolienne Paloise Coral Foyot Rachel" style="--area-bg:#FFF0B5;--accent:#B8901A">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9arnaise_sauce_with_Tarragon_garnish.jpeg?width=600" alt="Foto de Salsa bearnesa" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-bearnesa.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Semicoaguladas</span>
+    <h3>Salsa bearnesa</h3>
+    <p class="sub">Reducción de estragón</p>
+    <div class="meta"><span>⚖️ 400 cc</span><span>📝 9 pasos</span><span>🧂 10</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/beurre-blanc.html" data-area="salsas-de-mantequilla" data-search="Beurre blanc Mantequilla blanca Salsas emulsionadas calientes Chalota picada Vinagre blanco Pimienta negra machacada Sal Mantequilla Crema de leche (opcional) Beurre rouge" style="--area-bg:#FBDDE4;--accent:#C95C7C">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Purple_asparagus_in_Beurre_blanc_sauce.jpg?width=600" alt="Foto de Beurre blanc" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/beurre-blanc.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>De mantequilla</span>
+    <h3>Beurre blanc</h3>
+    <p class="sub">Mantequilla blanca</p>
+    <div class="meta"><span>⚖️ 400 g</span><span>📝 6 pasos</span><span>🧂 6</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/beurre-fondue.html" data-area="salsas-de-mantequilla" data-search="Beurre fondue Mantequilla fundida al limón Salsas emulsionadas calientes Agua Jugo de limón Sal Mantequilla fría picada" style="--area-bg:#FBDDE4;--accent:#C95C7C">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bowl_of_melted_butter.jpg?width=600" alt="Foto de Beurre fondue" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/beurre-fondue.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>De mantequilla</span>
+    <h3>Beurre fondue</h3>
+    <p class="sub">Mantequilla fundida al limón</p>
+    <div class="meta"><span>⚖️ Al momento</span><span>📝 5 pasos</span><span>🧂 4</span></div>
+  </div>
+</a><a class="r-card reveal" href="recetas/masa-para-pastas.html" data-area="pastas" data-search="Masa para pastas frescas 1 huevo por cada 100 g de harina Pastas italianas Harina Huevo Aceite de oliva Sal Agua para la cocción" style="--area-bg:#D4EAFA;--accent:#3F82BC">
+  <div class="img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Art_of_Pasta_Making_in_Italy_with_Mama_Isa.jpg?width=600" alt="Foto de Masa para pastas frescas" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/masa-para-pastas.svg'"></div>
+  <div class="body">
+    <span class="chip"><span class="chip-dot"></span>Pastas</span>
+    <h3>Masa para pastas frescas</h3>
+    <p class="sub">1 huevo por cada 100 g de harina</p>
+    <div class="meta"><span>⚖️ 100 g harina</span><span>📝 4 pasos</span><span>🧂 5</span></div>
+  </div>
+</a></div>
+    <p class="empty">No hay recetas que coincidan. Prueba con otra palabra 🍋</p>
+  </div>
+</section>
+
+<section class="section" id="salsas-madre">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Explorador</span>
+      <h2>De la salsa madre a sus derivadas</h2>
+      <p>Cada salsa madre es la base de muchas otras: se le suma una garnitura y nace una nueva. Selecciona una para ver su familia.</p>
+    </div>
+    <div class="explorer reveal">
+      <div class="ex-list" role="tablist"><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#CFEFE3"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fresh_mayonnaise.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/mayonesa.svg'"><span>Mayonesa<small>7 derivados</small></span></button><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#E7DFFA"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Making_White_sauce_5.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/veloute.svg'"><span>Velouté<small>17 derivados</small></span></button><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#E7DFFA"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2021_Sos_beszamelowy.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/bechamel.svg'"><span>Bechamel<small>5 derivados</small></span></button><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#FFDCCB"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sauce_Spagnole-09.JPG?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-espanola.svg'"><span>Salsa española<small>3 derivados</small></span></button><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#FFF0B5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spargel_sauce_hollandaise.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-holandesa.svg'"><span>Salsa holandesa<small>4 derivados</small></span></button><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#FFF0B5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9arnaise_sauce_with_Tarragon_garnish.jpeg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/salsa-bearnesa.svg'"><span>Salsa bearnesa<small>6 derivados</small></span></button><button class="ex-btn" role="tab" aria-selected="false" style="--area-bg:#CFEFE3"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raspberry_vinaigrette.jpg?width=200" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/img/recetas/vinagreta.svg'"><span>Vinagreta<small>8 derivados</small></span></button></div>
+      <div class="ex-panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+    <script type="application/json" id="explorer-data">[{"titulo": "Mayonesa", "area": "Salsas frías emulsionadas", "bg": "#CFEFE3", "accent": "#3E9C78", "desc": "La salsa debe su nombre a su lugar de origen, la isla de Mahón (Baleares), desde donde la llevó a Francia el Duque de Richelieu tras tomar la isla en 1756. Su resultado característico es la densidad y el volumen que alcanza.", "deriv": [["Remolada", "pepinillo, alcaparras, cebolla perla y perejil picado fino"], ["Tártara", "huevos duros picados, pepinillos, alcaparras, cebolla perla y perejil"], ["Tyrolienne", "puré de tomates y perejil picado"], ["Verde", "extracto de espinaca blanqueada, perejil, perifollo, berros, estragón y finas hierbas en puré"], ["Andaluza", "puré de tomates y pimiento rojo en brunoise"], ["Cóctel", "ketchup, coñac, salsa inglesa y tabasco"], ["Mosquetera", "chalotas reducidas en vino blanco, ciboulette, cayena y glace de viande"]], "href": "recetas/mayonesa.html"}, {"titulo": "Velouté", "area": "Salsas blancas", "bg": "#E7DFFA", "accent": "#7A62C6", "desc": "Mezcla de un roux más fondo de cualquier tipo. Se usa como base para salsas clásicas, cremas modernas, salsas derivadas y otras aplicaciones de cocina.", "deriv": [["Alcaparras", "garnitura de alcaparras al vinagre"], ["Champiñones", "champiñones en emincé estofados"], ["Chivry", "hierbas picadas y blanqueadas (estragón, perejil, cilantro, romero)"], ["Ciboulette", "ciboulette picado"], ["Estragón", "vinagre de estragón y hojas de estragón picadas"], ["Raifort", "raíz picante rallada"], ["Albufera", "un poco de glace de carne"], ["Champiñones", "cabezas de champiñones blancos estofadas y su caldo reducido"], ["Toulousaine", "esencia de trufa, jugo de limón y montada en mantequilla"], ["Anchoas", "mantequilla de anchoas al terminar"], ["Bercy", "reducción con chalotas, montada con mantequilla y perejil"], ["Camarones", "mantequilla de camarones, colitas de camarón y cayena"], ["Alcaparras", "alcaparras picadas como garnitura"], ["Diplomada", "mantequilla de langosta, cubitos de langosta y trufas"], ["Finas hierbas", "perejil y estragón picado fino"], ["Ostras", "ostras pochadas"], ["Riche", "diplomada con esencia de trufas, trufas picadas y champiñones"]], "href": "recetas/veloute.html"}, {"titulo": "Bechamel", "area": "Salsas blancas", "bg": "#E7DFFA", "accent": "#7A62C6", "desc": "Se elabora mezclando un roux con leche. Se usa como base para salsas clásicas, derivadas, cremas, para gratinar y otras aplicaciones en cocina.", "deriv": [["Aurora", "salsa cremosa tomatada"], ["Mousseline", "bechamel terminada con crema fresca"], ["Mornay", "queso rallado maduro, mantequilla fresca y una pizca de cayena"], ["Nantua", "montada con mantequilla de cangrejos y colas de cangrejo"], ["Raifort", "terminada con bastante raíz picante rallada"]], "href": "recetas/bechamel.html"}, {"titulo": "Salsa española", "area": "Salsas oscuras", "bg": "#FFDCCB", "accent": "#C9653F", "desc": "Salsa madre clásica francesa, aunque de origen español. Se usa para carnes oscuras y, sobre todo, como base de otras salsas. Tiene un sabor y aroma pronunciados a huesos y vegetales dorados, especias, finas hierbas, vino tinto, tomate y tocino.", "deriv": [["Diabla", "ají en trozos o pasta de ají"], ["Bourguignonne", "cebolla perla, champiñones, tocino y perejil picado"], ["Finas hierbas", "romero, tomillo y orégano frescos picados"]], "href": "recetas/salsa-espanola.html"}, {"titulo": "Salsa holandesa", "area": "Salsas semicoaguladas calientes", "bg": "#FFF0B5", "accent": "#B8901A", "desc": "Se elabora con una reducción de jugo de limón, agua y pimienta negra, más yemas de huevo, montada con mantequilla clarificada. Acompaña pescados, huevos y verduras cocidas, pochadas o al vapor.", "deriv": [["Mousseline", "crema batida al servir; para espárragos, brócolis, alcachofa o coliflor"], ["Mostaza", "con mostaza; para pescados blancos pochados"], ["Maltesa", "jugo y zeste de naranja en juliana fina"], ["Mikado", "jugo y zeste de mandarina en juliana, blanqueados"]], "href": "recetas/salsa-holandesa.html"}, {"titulo": "Salsa bearnesa", "area": "Salsas semicoaguladas calientes", "bg": "#FFF0B5", "accent": "#B8901A", "desc": "Creada posiblemente por el chef Julio Colette en un restaurante de París. Se elabora con una reducción de vinagre de estragón y chalota, yemas y mantequilla clarificada. Acompaña sobre todo carnes y pescados grillados.", "deriv": [["Choron", "concassé de tomate bien concentrado; carnes y pescados grillados"], ["Tyrolienne", "montada al aceite con tomate reducido o picado"], ["Paloise", "sin estragón, con menta fresca; crustáceos grillados"], ["Coral", "sin yemas, con coral de cangrejo o langosta"], ["Foyot", "con glace de viande; carnes grilladas"], ["Rachel", "concentrado de tomate y glace de viande"]], "href": "recetas/salsa-bearnesa.html"}, {"titulo": "Vinagreta", "area": "Salsas frías emulsionadas", "bg": "#CFEFE3", "accent": "#3E9C78", "desc": "Los dressings (del inglés, nombre de los aderezos en general) acompañan las ensaladas para volverlas más apetitosas y sabrosas. El resultado es un líquido menos denso que la mayonesa, con mucho volumen y brillo.", "deriv": [["Vinagreta Noruega", "yema de huevo duro y filetes de anchoas picadas"], ["Du Pêcheur", "carne de jaiba desmenuzada"], ["Ravigote", "alcaparras y pepinillos cortados muy finos"], ["French dressing", "aceite, vinagre, mostaza Dijon, sal y pimienta"], ["Chiffonade", "french dressing con perejil, huevo duro, páprika, aceitunas y pepinillos"], ["Cream dressing", "french dressing con crema de leche o crema agria"], ["Cheese dressing", "french dressing con mostaza, salsa inglesa y queso roquefort"], ["Russian dressing", "french dressing con mayonesa, huevo duro, salsa de ají y pimentón verde"]], "href": "recetas/vinagreta.html"}]</script>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div><h4>🥄 Cocina Básica · Recetario</h4>
+      <p>Recetario digital construido a partir del <em>Manual de apoyo: Cocina Básica</em> de la Escuela de Gastronomía Duoc UC (enero 2024). Recetas, técnicas y derivados de las salsas madre y las pastas frescas.</p></div>
+    <div><h4>Áreas</h4><a href="areas/salsas-frias.html">Salsas frías emulsionadas</a><a href="areas/salsas-blancas.html">Salsas blancas</a><a href="areas/salsas-oscuras.html">Salsas oscuras</a><a href="areas/salsas-semicoaguladas.html">Salsas semicoaguladas calientes</a><a href="areas/salsas-de-mantequilla.html">Salsas emulsionadas calientes</a><a href="areas/pastas.html">Pastas italianas</a></div>
+    <div><h4>Recetas</h4><a href="recetas/mayonesa.html">Mayonesa</a><a href="recetas/vinagreta.html">Vinagreta</a><a href="recetas/veloute.html">Velouté</a><a href="recetas/bechamel.html">Bechamel</a><a href="recetas/reduccion-de-crema.html">Salsa por reducción de crema</a><a href="recetas/salsa-espanola.html">Salsa española</a><a href="index.html#recetario">Ver todas →</a></div>
+    <p class="legal">Contenido de uso educativo. Fotografías de Wikimedia Commons bajo licencias libres; PAGINA DESARROLLA POR CLAUDIA GUTIERREZ PARA LA CARRERA DE GASTRONOMÍA DUOCUC</p>
+  </div>
+</footer>
+<button class="to-top" aria-label="Volver arriba">↑</button>
+<script src="assets/js/main.js"></script>
+<script>
+/* Contador de visitas (servicio gratuito Abacus). Cada navegador se cuenta una sola vez. */
+(function () {
+  var API = "https://abacus.jasoncameron.dev";
+  var CONTADOR = "cocina-basica-duocuc-sanandres/visitas";
+  var yaVisito = false;
+  try { yaVisito = localStorage.getItem("cb-visitado") === "1"; } catch (e) {}
+  fetch(API + (yaVisito ? "/get/" : "/hit/") + CONTADOR)
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (typeof d.value !== "number") return;
+      try { localStorage.setItem("cb-visitado", "1"); } catch (e) {}
+      var caja = document.getElementById("visitas"), num = document.getElementById("visitas-num");
+      caja.hidden = false;
+      var fin = d.value, t0 = null;
+      function paso(t) {
+        if (!t0) t0 = t;
+        var p = Math.min((t - t0) / 1200, 1);
+        num.textContent = Math.round(fin * (1 - Math.pow(1 - p, 3))).toLocaleString("es-CL");
+        if (p < 1) requestAnimationFrame(paso);
+      }
+      requestAnimationFrame(paso);
+    })
+    .catch(function () { /* si el servicio no responde, el contador simplemente no se muestra */ });
+})();
+</script>
+</body>
+</html>
